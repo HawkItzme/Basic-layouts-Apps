@@ -1,5 +1,7 @@
 package com.example.layoutpractice
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,12 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.button.setOnClickListener {
-            val firstname = binding.textView.text.toString()
-            val lastname = binding.textView2.text.toString()
-            val dob = binding.textView3.text.toString()
-            val country = binding.textView4.text.toString()
-            Log.d("MainActivity", "$firstname $lastname DOB is $dob and his country is $country")
+        binding.btn.setOnClickListener {
+            Intent(Intent.ACTION_GET_CONTENT).also {
+                it.type = "image/*"
+                startActivityForResult(it, 0)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == 0){
+            val uri = data?.data
+            binding.imView.setImageURI(uri)
         }
     }
 }
