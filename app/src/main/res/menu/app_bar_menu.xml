@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/settings"
+    android:title="Settings"
+    app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/fvrts"
+        android:title="Like"
+        android:icon="@drawable/im_fvrt_foreground"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/close"
+        android:title="CLOSE"
+        android:icon="@drawable/im_fvrt_foreground"
+        app:showAsAction="never" />
+
+
+
+</menu>
