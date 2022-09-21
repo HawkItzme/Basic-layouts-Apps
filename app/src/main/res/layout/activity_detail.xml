@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/Poster"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ce_poster"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/poster" />
+    <TextView
+        android:id="@+id/movTitle"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/movie_title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:lines="2"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/movDir"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/director"
+        android:textColor="@color/darkGray"
+        android:textSize="20sp"
+        android:lines="1" />
+    <TextView
+        android:id="@+id/description"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/director"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+</LinearLayout>
